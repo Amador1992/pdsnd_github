@@ -22,7 +22,7 @@ def get_filters():
     cities =['chicago','new york city', 'washington']
 
    #Have user input which city to choose
-    city = input("Which city would you like to choose: chicago, new york city or washington: ").lower()
+    city = input("Choose a city from the following: chicago, new york city or washington: ").lower()
 
     #Checking to see if proper city was selected if not, it will print an error message
     while True:
@@ -31,7 +31,7 @@ def get_filters():
             break
         else:
             print("Error: please select chicago, new york city or washington please...")
-            city = input("Which city would you like to choose: chicago, new york or washington: ").lower()
+            city = input("Choose a city from the following: chicago, new york or washington: ").lower()
 
 
     # TO DO: get user input for month (all, january, february, ... , june)
@@ -40,7 +40,7 @@ def get_filters():
     months = ['january','february','march','april','may','june']
 
     #have user input which month to choose, lower() so it wont be case sensitive
-    month = input("Which month will you choose: janaury - june are the selections: ").lower()
+    month = input("Choose a month: janaury - june are the selections: ").lower()
 
     #check to see if user choose the correct month,lower() so it wont be case sensitive
     while True:
@@ -49,7 +49,7 @@ def get_filters():
             break
         else:
             print("Error: please select from the months of january through june only please...")
-            month = input("Which month will you choose: janaury - june are the selections: ").lower()
+            month = input("Choose a month : janaury - june are the selections: ").lower()
             break
 
 
