@@ -1,0 +1,5 @@
+#do no track DS_Store
+.DS_Store
+
+#ignore all csv files
+*.csv
