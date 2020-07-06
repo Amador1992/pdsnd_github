@@ -22,7 +22,7 @@ def get_filters():
     cities =['chicago','new york city', 'washington']
 
    #Have user input which city to choose
-    city = input("Which city would you like to choose: chicago, new york city or washington: ").lower()
+    city = input("Choose a city from the following: chicago, new york city or washington: ").lower()
 
     #Checking to see if proper city was selected if not, it will print an error message
     while True:
@@ -31,7 +31,7 @@ def get_filters():
             break
         else:
             print("Error: please select chicago, new york city or washington please...")
-            city = input("Which city would you like to choose: chicago, new york or washington: ").lower()
+            city = input("Choose a city from the following: chicago, new york or washington: ").lower()
 
 
     # TO DO: get user input for month (all, january, february, ... , june)
@@ -40,16 +40,16 @@ def get_filters():
     months = ['january','february','march','april','may','june']
 
     #have user input which month to choose, lower() so it wont be case sensitive
-    month = input("Which month will you choose: janaury - june are the selections: ").lower()
+    month = input("Choose a month: janaury - june are the selections: ").lower()
 
     #check to see if user choose the correct month,lower() so it wont be case sensitive
     while True:
         if month in months:
-            print("you have selected: " , month)
+            print("you have selected: {}".format(month))
             break
         else:
             print("Error: please select from the months of january through june only please...")
-            month = input("Which month will you choose: janaury - june are the selections: ").lower()
+            month = input("Choose a month : janaury - june are the selections: ").lower()
             break
 
 
@@ -140,13 +140,13 @@ def time_stats(df):
     # TO DO: display the most common day of week
     common_day_of_week = df['day_of_week'].mode()[0]
 
-    print("The most common day of the week is ", common_day_of_week)
+    print("The most common day of the week is {}".format(common_day_of_week))
 
 
     # TO DO: display the most common start hour
     common_start_hour = df['hour'].mode()[0]
 
-    print("The most common star hour is ", common_start_hour)
+    print("The most common star hour is {}".format(common_start_hour))
 
 
 
@@ -163,13 +163,13 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     common_start_station = df['Start Station'].mode()[0]
 
-    print("The most common start station is ", common_start_station)
+    print("The most common start station is {}".format(common_start_station))
 
 
     # TO DO: display most commonly used end station
     common_end_station = df['End Station'].mode()[0]
 
-    print("The most common end station is ", common_end_station)
+    print("The most common end station is {}".format(common_end_station))
 
 
     # TO DO: display most frequent combination of start station and end station trip
@@ -197,15 +197,15 @@ def trip_duration_stats(df):
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
 
-    print('The average travel time is ', mean_travel_time)
+    print('The average travel time is {}'.format(mean_travel_time))
 
     #To Do: display most and least travel time
     max_time_travel = df['Trip Duration'].max()
 
     min_time_travel = df['Trip Duration'].min()
 
-    print("The longest trip duration is ", max_time_travel)
-    print("\nThe shortest trip duration is ", min_time_travel)
+    print("The longest trip duration is {}".format(max_time_travel))
+    print("\nThe shortest trip duration is {}".format(min_time_travel))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
