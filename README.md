@@ -17,3 +17,5 @@ chicago.csv
 ### Credits
 I used Udacity knowledge for advice on how to approach this project
 https://knowledge.udacity.com/?page=1&sort=SCORE
+I did extended research to understand and see how dictionaries work.
+https://www.programiz.com/python-programming/dictionary
